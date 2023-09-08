@@ -1,0 +1,145 @@
+---------------------------For Virtual Machine Ubuntu Docker Deployment---------------------------------
+
+---------------------------------------------------------------------------------------------------------
+step 1: pull the directory into github by using command
+git clone https://github.com/shreys7/django-todo.git
+----------------------------------------------------------------------------------------------------------
+
+step 2: Go to the repo django-todo
+cd django-todo
+----------------------------------------------------------------------------------------------------------
+
+step 3: Update the system of VM by Using command
+sudo apt-get update
+-----------------------------------------------------------------------------------------------------------
+
+step 4: Download python in our VM
+sudo apt install python3-django
+------------------------------------------------------------------------------------------------------------
+
+step 5: Download pip in our VM 
+sudo apt install python3-pip
+-------------------------------------------------------------------------------------------------------------
+
+step 6: Install django in VM of Dependencies
+pip3 install django
+--------------------------------------------------------------------------------------------------------------
+
+step 7: Then now we have to mange file is migrate by using command------>(Django python manage.py migrate command migrate executes those SQL commands in the database file. So after executing migrate all the tables of your installed apps are created in your database file. You can confirm this by installing SQLite browser and opening db)
+python3 manage.py migrate
+
+---------------------------------------------------------------------------------------------------------------
+step 8: Run the Surver on local host by follow Command
+python3 manage.py runserver
+
+http://127.0.0.1(Localhost IP):8000(Port)/ 
+
+------------  Runing System (LocalHost)---------------------------------
+            Django version 2.2.12, using settings 'todoApp.settings'    |
+            Starting development server at http://127.0.0.1:8000/       |
+            Quit the server with CONTROL-C.                             |
+-------------------------------------------------------------------------------------------------------
+
+step 9: Expose to All (Open to all) Accessibale to anyware
+python3 manage.py runserver 0.0.0.0:8000
+
+-----Facing This Error------------
+DisallowedHost at /
+Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+
+-----Solution of this Error--------
+1) Go To the --> todoApp  --> settings.py  --> Change the --> ALLOWED_HOSTS = [] ----> ALLOWED_HOSTS = ['*'] (This means we can add here IP or add '*'(Apstrick) if the ip is change allow to all user )
+-----------or-------------
+2) Use Commond ---> vi todoApp/settings.py --> press --> i --> Change the --> ALLOWED_HOSTS = [] ----> ALLOWED_HOSTS = ['*'] (This means we can add here IP or add '*'(Apstrick) if the ip is change allow to all user --> last to save the file press---> (Esc + : + w + q) :wq  --> Enter )
+-----------------------------------------------------------------------------------------------------------
+
+step 10: How to run server continuous on background by using Command 
+nohup python3 manage.py runserver 0.0.0.0:8000 & 
+------------------------------------------------------------------------------------------------------------
+
+step 11: How to stop or Kill the Running background service by usning commands
+1)lsof -i:8000
+then --->
+     ____________________________________________________________________________
+    |    COMMAND   PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME              |
+    |   python3  24153 ritesh    4u  IPv4 305204      0t0  TCP *:8000 (LISTEN)   |
+    |____________________________________________________________________________|
+
+-----> Copy the PID --->then use command
+2)kill -9 <PID>       ----------> kill -9 24153   ----> stop the bacground Running server
+----------------------------------------------------------------------------------------------------------------------
+
+step 12: Install Docker in VM
+sudo apt install docker.io
+----------------------------------------------------------------------------------------------------------------------
+
+step 13: Create the Dockerfile -----> Dockerfile reference link Docker can build images automatically by reading the instruction(commands) from Dockerfile
+
+I have done all work Manully but now it convert to automatically by using Dockerfile
+--------------------------Manual Work-------------------------------------------------
+1) We have to update Operating System------> sudo apt-get update
+2) Install python3                   ------> sudo apt install python3-django 
+3) Install python3 Dependencies      ------> pip3 install django
+4) Copy the cloned
+5) Run thr Code                      -------> python3 manage.py runserver
+
+--------------------------Dockerfile (Automate)----------------------------------------
+Dockerfile------->Create Image
+
+1) We have to update Operating System             ------>  FROM python:3
+2) Install python3                                ------/
+3) Install python3 Dependencies                   ------>  RUN pip install django==3,2
+4) Copy the cloned (COPY .(sourse) .(Destination))------>  COPY . .      
+5) Run thr Code                                   ------>  RUN python3 manage.py migrate
+                                                  ------>  CMD ["python3","manage.py","runserver","0.0.0.0:8000"]
+
+-------------------------------------------------------------------------------------------------------------------------
+
+step 14: Build the Docker Image by giving tag todo-app
+sudo docker build . -t todo-app
+
+Docker Automation is here.
+........Successfully built 9ee4a4d2ca3e   -------> this is an Image ID
+        Successfully tagged todo-app:latest
+
+-----------------------------------------------------------------------------------------------------------
+step 14: How to check process status
+sudo docker ps
+-----------------------------------------------------------------------------------------------------------
+step 15: Run the image by port 8000
+sudo docker run -p 8000:8000 9ee4a4d2ca3e
+
+9ee4a4d2ca3e  -------> Image ID
+------------------------------------------------------------------------------------------------------------
+step 16: Run with Browser by using ip localhost-IP(127.0.0.1) with port(8000)
+http://127.0.0.1:8000    -----------(Localhost-IP):8000-----> search into VM Machine
+
+-------------------------------------------------------------------------------------------------------------
+step 17: Find the ip of VM by using command
+hostname -I
+
+192.168.19.192(Virtual-Machine IP)  172.17.0.1 2409:40c2:1059:8ac3:db4c:7edf:7670:19f3 2409:40c2:1059:8ac3:746e:1723:9fca:44a0
+
+------------------------------------------------------------------------------------------------------------
+step 18: Run to the External Machine by using 192.168.19.192
+http://192.168.19.192:8000
+
+
+---------------------http://192.168.19.192:8000/todos/
+--------------------------------------------------------------------------------------------------------------
+step 19: Run the App in Background by using Command demain(-d)
+sudo docker run -d -p 8000:8000 9ee4a4d2ca3e
+--------------------------------------------------------------------------------------------------------------
+step 20: Check the process status
+sudo docker ps
+
+____________________________________________________________________________________________________________________________________________________
+|CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                       NAMES          |
+|c74a87cf9a90   9ee4a4d2ca3e   "python3 manage.py r…"   52 seconds ago   Up 51 seconds   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp   nifty_banzai   |
+|___________________________________________________________________________________________________________________________________________________|
+--------------------------------------------------------------------------------------------------------------
+step 21: How to stop the background Running App
+sudo docker stop c74a87cf9a90        ---------> Stop App by using CONTAINER ID
+--------------------------------------------------------------------------------------------------------------
+
+

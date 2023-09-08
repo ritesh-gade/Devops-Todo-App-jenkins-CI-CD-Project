@@ -1,0 +1,47 @@
+----------------------------------------------------
+CI/CD-------> Continuous Integration/Continuous Deployment
+
+--------->1) We have required one setup for all process so it is called Node -----> So Node(Set-up Agent) is an Environment which allow to create the pipelines
+
+          2) We have to create New Node -----> Fill All Info and Path(Remote Root directory(By Using Command---> pwd ))--> Create Node ---> Check the node is Ready or Not ?
+
+          3) Then Create a Job(Go To --> Dashboard)------> Enter the item name---> click OK --->Configuration
+
+          4) Click on Build Steps -----> Add build step --> Execute Shell 
+                                  ----> use the pwd path of our project 
+                                  --> django-todo by using Command
+                                    1) pwd 
+                                    --> /home/ritesh/Projects/Todo-List-Project/django-todo
+
+                                  --> Give the Read write Execute permission of all user of our django-todo project
+                                    2) chmod 777 django-todo/
+
+                                  --> Then build the django-todo
+                                    3) sudo docker build . -t todo-dev     -----> todo-dev(image name)
+
+                                  --> Run the django-todo project on 8000 port by using demain(background)
+                                    4) sudo docker run -d -p 8000:8000 todo-dev
+                                
+           ---------------------  Execute Shell --------------------------
+           | cd /home/ritesh/Projects/Todo-List-Project/django-todo      |
+           | sudo docker build . -t todo-dev                             |
+           | sudo docker run -d -p 8000:8000 todo-dev                    |
+           |                                                             |
+           --------------------------------------------------------------                   
+                                   ---> Click to save
+          
+          5) Click to Build ---> Check the status ----> check Console Output --> Green run Successfully then ---->
+          6) Run on our browser ----> http://127.0.0.1:8000/                
+
+
+----> Facing the Error of : sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+solve to --> sudo su    ---> Go to root user
+             nano /etc/sudoers   ----> Open this file and change on it / also open in ---> vi /etc/sudoers
+
+          --> Changes of file ---> add following line under the comment 
+          #User privilege specification.
+          jenkins ALL= NOPASSWD: ALL
+
+
+
+

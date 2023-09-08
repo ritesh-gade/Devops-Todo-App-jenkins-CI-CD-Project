@@ -1,0 +1,156 @@
+Watching for file changes with StatReloader
+[06/Sep/2023 15:28:36] "GET /todos/ HTTP/1.1" 200 2328
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 06, 2023 - 15:28:13
+Django version 2.2.12, using settings 'todoApp.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 06, 2023 - 15:29:57
+Django version 2.2.12, using settings 'todoApp.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 06, 2023 - 15:38:46
+Django version 2.2.12, using settings 'todoApp.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[06/Sep/2023 15:43:03] "GET / HTTP/1.1" 302 0
+[06/Sep/2023 15:43:03] "GET /todos HTTP/1.1" 301 0
+[06/Sep/2023 15:43:03] "GET /todos/ HTTP/1.1" 200 2328
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 06, 2023 - 15:42:36
+Django version 2.2.12, using settings 'todoApp.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+[06/Sep/2023 15:45:53] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 15:45:54] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 15:45:57] "GET /todos/ HTTP/1.1" 200 2328
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 06, 2023 - 15:44:28
+Django version 2.2.12, using settings 'todoApp.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 06, 2023 - 16:16:58
+Django version 2.2.12, using settings 'todoApp.settings'
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 06, 2023 - 16:17:33
+Django version 2.2.12, using settings 'todoApp.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 06, 2023 - 16:19:51
+Django version 2.2.12, using settings 'todoApp.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[06/Sep/2023 16:25:44] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 16:25:46] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 16:32:04] "GET /todos/ HTTP/1.1" 200 2328
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 06, 2023 - 16:25:29
+Django version 2.2.12, using settings 'todoApp.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 06, 2023 - 16:37:39
+Django version 2.2.12, using settings 'todoApp.settings'
+Starting development server at http://0.0.0.0:81/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 06, 2023 - 16:50:00
+Django version 2.2.12, using settings 'todoApp.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 06, 2023 - 16:51:32
+Django version 2.2.12, using settings 'todoApp.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 06, 2023 - 16:51:56
+Django version 2.2.12, using settings 'todoApp.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[06/Sep/2023 16:53:57] "GET / HTTP/1.1" 302 0
+[06/Sep/2023 16:53:57] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 16:54:01] "GET /todos/ HTTP/1.1" 200 2328
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 06, 2023 - 16:53:25
+Django version 2.2.12, using settings 'todoApp.settings'
+Starting development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+[06/Sep/2023 16:54:55] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 16:54:55] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 16:55:57] "GET /todos/ HTTP/1.1" 200 2328
+Not Found: /favicon.ico
+[06/Sep/2023 16:55:59] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 16:56:10] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 16:56:11] "GET /todos/ HTTP/1.1" 200 2328
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+[06/Sep/2023 16:59:51] "GET / HTTP/1.1" 302 0
+[06/Sep/2023 16:59:51] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 16:59:54] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 16:59:54] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 16:59:57] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 16:59:59] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 17:08:57] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 17:08:57] "GET /static/css/style.css HTTP/1.1" 304 0
+[06/Sep/2023 17:08:58] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 17:08:59] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 17:09:00] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 17:09:01] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 17:09:02] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 17:09:03] "GET /todos/ HTTP/1.1" 200 2328
+[06/Sep/2023 17:09:05] "GET /todos/ HTTP/1.1" 200 2328

@@ -1,0 +1,64 @@
+-------------------------------Devops Project-------------------------------------------------
+------>version Control System
+------>VS Code
+
+step 1: Pull the project from github
+git clone https://github.com/shreys7/django-todo.git
+
+step 2: Install the python virtualenv 
+sudo apt install python3-virtualenv
+
+step 3: Crete virtual-environment in python
+virtualenv -p python3 env
+
+step 4: Activate virtual-env-----------Activate env
+source env/bin/activate
+
+step 5: Go to the django-todo directory
+cd django-todo
+
+step 6: Install python django
+sudo apt install python3-django
+
+step 7: Install django
+pip3 install django
+
+step 8: cloned repo directory and run the following command  -------This will create all the migrations file (database migrations) required to run this App.
+python3 manage.py makemigrations
+
+step 9: Now, to apply this migrations run the following command
+python3 manage.py migrate
+
+step 10: We need to create an admin user to run this App. On the terminal, type the following command and provide username, password and email for the admin user
+python3 manage.py createsuperuser
+
+username: ritesh
+Email address: riteshgade16@gmail.com
+password: Ritesh@9881
+
+step 11: Now let's make the App live. We just need to start the server now and then we can start using our simple todo App. Start the server by following command
+python manage.py runserver
+
+-------Starting development server at http://127.0.0.1:8000/
+        Quit the server with CONTROL-C.
+
+http://127.0.0.1:8000/todos/-     -------------127.0.0.1:8000(Local host)
+
+step 12: Create requirements.txt file  of our local data this data we have touse in Docker
+pip freeze > requriments.txt
+
+step 13: Create new branch---------Switch to the new branch
+git checkout -b feature/deploy-app
+
+step 14: Add the all the files
+git add .
+
+step 15: Commt the requriments
+git commit -m "added requirements"
+
+----------[feature/deploy-app 4d0a0fc] added requirements
+           2 files changed, 5 insertions(+)
+            create mode 100644 requriments.txt
+
+step 16: How to deactive our environment use command
+deactivate

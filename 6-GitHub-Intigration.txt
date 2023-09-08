@@ -1,0 +1,33 @@
+-------------------------------GitHub Push Our Project------------------------------------
+1) How to check the point of repository
+---> git remote -v
+
+    ___________________Showing like this_________________________________
+   |origin	https://github.com/ritesh-gade/Todo-List-Project.git (fetch) |
+   |origin	https://github.com/ritesh-gade/Todo-List-Project.git (push)  |
+   |_____________________________________________________________________|
+
+2) How to change the point of repository by our URL
+---> git remote set-url origin <Our URL>
+
+3) How to check status
+---> git status
+
+4) Add our Current Repo in local
+---> git add .
+
+5) Again check status
+---> git status
+
+6) Then Commit Our repository
+---> git commit -m "Added Server code"
+
+7) Push our project to github
+---> git push origin master
+
+    _______________________________Ask To ____________________________________
+   |Username of GitHub: ritesh-gade                                           |
+   |Password of Github: <Access Token Code Paste Here>                        |
+   |__________________________________________________________________________|
+
+   -----> Successfully Push Your Code "Good Luck"
