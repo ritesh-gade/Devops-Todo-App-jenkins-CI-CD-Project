@@ -1,0 +1,23 @@
+---------------------Todo-list project GitHub to jenkins pipelines--------------------------
+
+step:1 First to create New project(Click--->New Item)
+
+step:2 Enter an item name----> Github-Todo
+
+step:3 Select Freestyle Project------>Click to OK
+
+step:4 In General  --> Go to the Source Code Management ----> Select " Git "
+
+step:5 Repository URL ----> https://github.com/ritesh-gade/Devops-Todo-App-jenkins-CI-CD-Project.git
+
+step:6 Add Genkins Credentaila with Access Token ---> Create or to check to connection
+
+step:7 Branch Specifier----> */master
+
+step:8 Go to --> Build Steps ---> Execute Shell ---> write commands
+sudo docker build . -t todo-app
+sudo docker run -p 8000:8000 -d todo-app
+
+step:9 Save and Run the project(Build the project)
+
+----------------------------------------------------------------------------------------------
